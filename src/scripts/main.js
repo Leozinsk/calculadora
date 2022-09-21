@@ -5,7 +5,7 @@ const operadores = document.querySelectorAll('.operadores')
 
 form.addEventListener('click', (e)=>{
     e.preventDefault();
-    console.log(e.srcElement.innerText);
+    console.log(e.target.innerText);
     if(visor.innerHTML.length >= 8){
         visor.classList.add('visor__small')
     }
