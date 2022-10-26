@@ -11,14 +11,15 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <main class="base">
+        <main class="base">
         <section class="visor">
-            <div class="visor__info"></div>
+            <div class="visor__secundario"></div>
+            <div class="visor__primario"></div>
         </section>
         <form class="teclas">
-            <button class="tecla" value="CE" type="button">CE</button>
-            <button class="tecla" value="C" type="button">C</button>
-            <button class="tecla" value="<" type="button"><</button>
+            <button class="tecla limpar__tela_parcial" value="CE" type="button">CE</button>
+            <button class="tecla limpar__tela_completo" value="C" type="button">C</button>
+            <button class="tecla" value="%" type="button">%</button>
             <button class="tecla" value="/" type="button">/</button>
             <button class="tecla" value="7" type="button">7</button>
             <button class="tecla" value="8" type="button">8</button>
@@ -34,11 +35,11 @@
             <button class="tecla" value="+" type="button">+</button>
             <button class="tecla" value="±" type="button">±</button>
             <button class="tecla" value="0" type="button">0</button>
-            <button class="tecla" value="," type="button">,</button>
+            <button class="tecla" value="." type="button">,</button>
             <button class="tecla" value="=" type="submit">=</button>
         </form>
     </main>
 
-    <script src="scripts/main.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
