@@ -89,7 +89,3 @@ function mostraDisplay(e: any) {
         }
     }
 }
-/* Bugs ja descobertos e ainda nao resolvidos, 
-- problema com limitação de caracteres
-*/
-//displayPrincipal.textContent = displayMain
