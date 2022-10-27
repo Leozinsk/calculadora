@@ -9,10 +9,7 @@
         - Alteração de tamanho de acordo com a quantidade de caracteres
         - Troca de sinal para positivo e negativo
         - Limitador de '.' dentro da operação
-        
-        
-        
-        
+        </br>
         
 ![2022-10-27 (1)](https://user-images.githubusercontent.com/103390905/198334646-6e71c0af-45fb-4a90-93a3-d6cd4ec92ee8.png)
 
