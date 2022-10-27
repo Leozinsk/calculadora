@@ -66,11 +66,14 @@ body{
             outline-style: none;
             width: 60px;
         }
-        .tecla:hover{
-            background-color: $medium-dark;
-        }
         .tecla:active{
             background-color: $darker-dark;
         }
     }
+}
+@media screen and (min-width:800px) {
+    .teclas{
+    .tecla:hover{
+        background-color: $medium-dark;
+    }}
 }

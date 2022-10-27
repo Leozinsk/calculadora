@@ -120,9 +120,12 @@ body {
   outline-style: none;
   width: 60px;
 }
-.base .teclas .tecla:hover {
-  background-color: #52796F;
-}
 .base .teclas .tecla:active {
   background-color: #2F3E46;
+}
+
+@media screen and (min-width: 800px) {
+  .teclas .tecla:hover {
+    background-color: #52796F;
+  }
 }
