@@ -11,7 +11,6 @@ form.addEventListener('click', (e) => {
     operacoes(evento.value)
     mostraDisplay(evento)
 })
-
 function operacoes(e: any) {
     if (operadores.includes(e)) {
         if (displaySecundario.innerHTML === '') {
@@ -52,17 +51,18 @@ function resetMainDisplay() {
 function resultados() {
     preResultado = [displaySecundario.innerHTML, displayPrincipal.innerHTML]
     const resultado = eval(preResultado.join(''))
+    const resultadoEval = resultado.toString()
     displaySecundario.textContent = ''
+
     resetMainDisplay()
-    displayMain = resultado.toFixed(4)
+    displayMain = resultadoEval.includes('.') ? resultado.toFixed(4) : resultado.toFixed(0)
     if (displayMain.length > 10) {
         displayPrincipal.classList.add('visor__small')
     } else {
         displayPrincipal.classList.remove('visor__small')
     }
-    displayPrincipal.innerHTML = displayMain.substring(0, 10)
+    displayPrincipal.innerHTML = displayMain.substring(0, 15)
 }
-
 function mostraDisplay(e: any) {
     if (e.value !== undefined &&
         e.value !== '/' &&
@@ -77,14 +77,14 @@ function mostraDisplay(e: any) {
     ) {
         if (e.value === '.') {
             if (displayMain.includes('.')) {
-                return void(0)
+                return void (0)
             }
         }
         displayMain += e.value
         displayPrincipal.textContent = displayMain.substring(0, 15)
         if (displayMain.length > 10) {
             displayPrincipal.classList.add('visor__small')
-        }else {
+        } else {
             displayPrincipal.classList.remove('visor__small')
         }
     }

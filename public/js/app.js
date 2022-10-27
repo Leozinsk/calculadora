@@ -58,16 +58,17 @@ function resetMainDisplay() {
 function resultados() {
     preResultado = [displaySecundario.innerHTML, displayPrincipal.innerHTML];
     const resultado = eval(preResultado.join(''));
+    const resultadoEval = resultado.toString();
     displaySecundario.textContent = '';
     resetMainDisplay();
-    displayMain = resultado.toFixed(4);
+    displayMain = resultadoEval.includes('.') ? resultado.toFixed(4) : resultado.toFixed(0);
     if (displayMain.length > 10) {
         displayPrincipal.classList.add('visor__small');
     }
     else {
         displayPrincipal.classList.remove('visor__small');
     }
-    displayPrincipal.innerHTML = displayMain.substring(0, 10);
+    displayPrincipal.innerHTML = displayMain.substring(0, 15);
 }
 function mostraDisplay(e) {
     if (e.value !== undefined &&
