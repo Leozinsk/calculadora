@@ -12,12 +12,12 @@ form.addEventListener('click', (e) => {
     mostraDisplay(evento);
 });
 function operacoes(e) {
-    if (operadores.includes(e)) { // Checa se o operador foi clicado
-        if (displaySecundario.innerHTML === '') { // Checa se já há infromação no display
+    if (operadores.includes(e)) {
+        if (displaySecundario.innerHTML === '') {
             displaySecundario.textContent = `${displayPrincipal.innerHTML + e}`;
             resetMainDisplay();
         }
-        else { // executa operação
+        else {
             resultados();
         }
     }
@@ -39,15 +39,15 @@ function operacoes(e) {
     else if (e === '±') {
         const conversorNegativo = -Math.abs(parseFloat(displayMain));
         const conversorPositivo = Math.abs(parseFloat(displayMain));
-        if (displayMain.includes('-')) {
-            displayMain = conversorPositivo.toString();
-            displayPrincipal.textContent = displayMain;
-            console.log(displayMain);
-        }
-        else {
-            displayMain = conversorNegativo.toString();
-            displayPrincipal.textContent = displayMain;
-            console.log(displayMain);
+        if (displayMain !== '') {
+            if (displayMain.includes('-')) {
+                displayMain = conversorPositivo.toString();
+                displayPrincipal.textContent = displayMain;
+            }
+            else {
+                displayMain = conversorNegativo.toString();
+                displayPrincipal.textContent = displayMain;
+            }
         }
     }
 }
@@ -60,7 +60,14 @@ function resultados() {
     const resultado = eval(preResultado.join(''));
     displaySecundario.textContent = '';
     resetMainDisplay();
-    displayPrincipal.innerHTML = resultado.toFixed(0, 4);
+    displayMain = resultado.toFixed(4);
+    if (displayMain.length > 10) {
+        displayPrincipal.classList.add('visor__small');
+    }
+    else {
+        displayPrincipal.classList.remove('visor__small');
+    }
+    displayPrincipal.innerHTML = displayMain.substring(0, 10);
 }
 function mostraDisplay(e) {
     if (e.value !== undefined &&
@@ -73,8 +80,13 @@ function mostraDisplay(e) {
         e.value !== 'CE' &&
         e.value !== '±' &&
         e.value !== '=') {
+        if (e.value === '.') {
+            if (displayMain.includes('.')) {
+                return void (0);
+            }
+        }
         displayMain += e.value;
-        displayPrincipal.textContent = displayMain;
+        displayPrincipal.textContent = displayMain.substring(0, 15);
         if (displayMain.length > 10) {
             displayPrincipal.classList.add('visor__small');
         }
@@ -83,3 +95,7 @@ function mostraDisplay(e) {
         }
     }
 }
+/* Bugs ja descobertos e ainda nao resolvidos,
+- problema com limitação de caracteres
+*/
+//displayPrincipal.textContent = displayMain
