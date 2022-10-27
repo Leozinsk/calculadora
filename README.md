@@ -11,8 +11,12 @@
         - Limitador de '.' dentro da operação
         
         
+        
+        
+        
 ![2022-10-27 (1)](https://user-images.githubusercontent.com/103390905/198334646-6e71c0af-45fb-4a90-93a3-d6cd4ec92ee8.png)
 
 
-![IMG_1442](https://user-images.githubusercontent.com/103390905/198334662-15c4e494-23e9-46e8-bfd8-730c62612fc9.PNG)
+![Untitled-3](https://user-images.githubusercontent.com/103390905/198335842-62562baf-d8f1-4f55-a982-3e50963f7488.png)
+
 
