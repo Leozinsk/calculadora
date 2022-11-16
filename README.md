@@ -6,8 +6,8 @@
 | -------------  | --- |
 | :sparkles: Nome        | **Calculadora**
 | :label: Tecnologias | JavaScript, html, scss, typescript
-| :rocket: URL         | https://url-deploy.com.br
-| :fire: Desafio     | https://url-do-desafio.com.br
+| :rocket: URL         | https://calculadora-build.vercel.app/
+| :fire: Desafio     | https://calculadora-build.vercel.app/
 
 ![2022-10-27 (1)](https://user-images.githubusercontent.com/103390905/198334646-6e71c0af-45fb-4a90-93a3-d6cd4ec92ee8.png)
 
